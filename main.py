@@ -42,9 +42,10 @@ print(f"Accuracy: {accuracy}")
 
 model.save('image_classifier.keras')
 '''
+
 model = models.load_model('image_classifier.keras')
 
-img = cv.imread('horse.jpg')
+img = cv.imread('sd.jpg')
 img = cv.cvtColor(img, cv.COLOR_BGR2RGB)
 
 plt.imshow(img, cmap=plt.cm.binary)
