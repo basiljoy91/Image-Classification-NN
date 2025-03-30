@@ -21,7 +21,7 @@ for i in range(16):
     plt.xlabel(class_names[training_labels[i][0]])
 plt.tight_layout()  # Added to prevent label overlap
 plt.show()
-
+'''
 # Training model
 model = models.Sequential()
 model.add(layers.Conv2D(32, (3,3), activation='relu', input_shape=(32,32,3)))  # Original format kept
@@ -40,4 +40,15 @@ loss, accuracy= model.evaluate(testing_images, testing_labels)
 print(f"Loss: {loss}")
 print(f"Accuracy: {accuracy}")
 
-model.save('image_classification')
+model.save('image_classifier.keras')
+'''
+model = models.load_model('image_classifier.keras')
+
+img = cv.imread('horse.jpg')
+img = cv.cvtColor(img, cv.COLOR_BGR2RGB)
+
+plt.imshow(img, cmap=plt.cm.binary)
+
+prediction = model.predict(np.array([img]) / 255.0)
+index = np.argmax(prediction)
+print(f'Prediction is {class_names[index]}')
