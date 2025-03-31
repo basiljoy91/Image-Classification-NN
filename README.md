@@ -1,9 +1,9 @@
 # Image Classification-NN
 
 ![Python](https://img.shields.io/badge/Python-3.7%2B-blue)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.1-orange)
 ![Keras](https://img.shields.io/badge/Keras-2.6-red)
-![OpenCV](https://img.shields.io/badge/OpenCV-4.x-green)
+![OpenCV](https://img.shields.io/badge/OpenCV-4.1-green)
 ![License](https://img.shields.io/badge/License-MIT-brightgreen)
 
 A convolutional neural network (CNN) implementation for classifying images from the CIFAR-10 dataset using TensorFlow and Keras.
